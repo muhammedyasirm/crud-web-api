@@ -28,11 +28,11 @@ module.exports = {
 // Config for mysql(I am using mysql)
 
 // module.exports = {
-//   HOST: "localhost",
-//   USER: "root",
-//   PASSWORD: "Mymsnb4fs@",
-//   DB: "fmc_db",
-//   dialect: "mysql",
+//   HOST: "",
+//   USER: "",
+//   PASSWORD: "",
+//   DB: "",
+//   dialect: "",
 //   pool: {
 //     max: 5,
 //     min: 0,
