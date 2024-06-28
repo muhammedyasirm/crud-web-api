@@ -11,20 +11,21 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Middleware to parse application/json
 app.use(bodyParser.json());
 
+app.use(cors());
+
 
 require("./app/routes/employee.routes")(app);
 
-var corsOptions = {
-  origin: "http://localhost:3000"
-};
+// var corsOptions = {
+//   origin: "http://localhost:3000/"
+// };
 
-app.use(cors(corsOptions));
 const db = require("./app/models/index");
 // db.sequelize.sync();
 
 db.sequelize.sync({ force: false }).then(() => {
-    console.log("Drop and re-sync db.");
-  });
+  console.log("Drop and re-sync db.");
+});
 
 // parse requests of content-type - application/json
 app.use(express.json());
